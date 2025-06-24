@@ -40,22 +40,19 @@ function weatherReport(data) {
   document.getElementById("img").src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
 }
 function getUpcomingDates() {
-  const today = new Date();
-  for (let i = 0; i < 4; i++) {
-    const futureDate = new Date(today);
-    futureDate.setDate(today.getDate() + i);
+    const today = new Date();
+    for (let i = 0; i < 4; i++) {
+        const futureDate = new Date(today);
+        futureDate.setDate(today.getDate() + i);
 
-    const options = { weekday: 'short', month: 'short', day: '2-digit', year: 'numeric' };
-    const formatted = futureDate.toLocaleDateString('en-US', options);
+        const options = { weekday: 'short', month: 'short', day: '2-digit', year: 'numeric' };
+        const formatted = futureDate.toLocaleDateString('en-US', options);
 
-    const dateElement = document.getElementById(`date${i}`);
-    if (dateElement) {
-      dateElement.textContent = formatted;
+        const el = document.getElementById(`date${i}`);
+        if (el) el.textContent = formatted;
     }
-  }
 }
 
-window.onload = function () {
-  getUpcomingDates(); // Call date function when page loads
-};
+// Call this when the page loads
+getUpcomingDates();
 
