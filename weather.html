@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://img.freepik.com/free-vector/weather-concept-illustration_114360-1189.jpg?semt=ais_hybrid&w=740">
+  <title>WEATHER APP</title>
+  <link rel="stylesheet" href="weather.css">
+
+  <style>
+    /* Background Video Styling */
+    #bgVideo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100vw;
+      min-height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🎥 Background Video -->
+  <video autoplay muted loop id="bgVideo">
+    <source src="https://cdn.pixabay.com/video/2023/06/23/168447-839220680_tiny.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- 🌦️ Main Weather App Content -->
+  <div class="content">
+    <div class="header">
+      <h1>WEATHER APP</h1>
+      <div>
+        <input type="text" id="input" placeholder="Enter city name">
+        <button id="search" onclick="searchByCity()">Search</button>
+      </div>
+    </div>
+
+    <main>
+      <div class="weather">
+        <h2 id="city">Delhi,IN</h2>
+        <div class="temp-box">
+          <img src="https://img.freepik.com/free-photo/view-3d-cloud_23-2151113393.jpg?ga=GA1.1.174258088.1750659359&semt=ais_hybrid&w=740" alt="" id="img">
+          <p id="temperature">26 °C</p>
+        </div>
+        <span id="clouds">Broken Clouds</span>
+      </div>
+      <div class="divider1"></div>
+
+      <div class="forecstH">
+        <p class="cast-header">Upcoming forecast</p>
+        <div class="templist">
+
+          <div class="next">
+            <div>
+              <p class="time">8:30 PM</p>
+              <p>29 °C / 29 °C</p>
+            </div>
+            <p class="desc">Light Rain</p>
+          </div>
+
+          <div class="next">
+            <div>
+              <p class="time">8:30 PM</p>
+              <p>29 °C / 29 °C</p>
+            </div>
+            <p class="desc">Light Rain</p>
+          </div>
+
+          <div class="next">
+            <div>
+              <p class="time">8:30 PM</p>
+              <p>29 °C / 29 °C</p>
+            </div>
+            <p class="desc">Light Rain</p>
+          </div>
+
+          <div class="next">
+            <div>
+              <p class="time">8:30 PM</p>
+              <p>29 °C / 29 °C</p>
+            </div>
+            <p class="desc">Light Rain</p>
+          </div>
+
+          <div class="next">
+            <div>
+              <p class="time">8:30 PM</p>
+              <p>29 °C / 29 °C</p>
+            </div>
+            <p class="desc">Light Rain</p>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <div class="forecstD">
+      <div class="divider2"></div>
+      <p class="cast-header">Next 4 days forecast</p>
+      <div class="weekF">
+
+        <div class="dayF">
+          <p class="date">Sun Jul 03 2022</p>
+          <p class="temp">31 °C / 25 °C</p>
+          <p class="desc">Overcast Clouds</p>
+        </div>
+
+        <div class="dayF">
+          <p class="date">Mon Jul 04 2022</p>
+          <p class="temp">30 °C / 24 °C</p>
+          <p class="desc">Light Rain</p>
+        </div>
+
+        <div class="dayF">
+          <p class="date">Tue Jul 05 2022</p>
+          <p class="temp">32 °C / 26 °C</p>
+          <p class="desc">Clear Sky</p>
+        </div>
+
+        <div class="dayF">
+          <p class="date">Wed Jul 06 2022</p>
+          <p class="temp">33 °C / 27 °C</p>
+          <p class="desc">Thunderstorm</p>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="footer-credit">
+      <p>🌦️ Made with ❤️ by <span>Richika Mourya Rahuk</span></p>
+    </footer>
+  </div> <!-- End of .content -->
+
+  <script src="weather.js"></script>
+</body>
+</html>
